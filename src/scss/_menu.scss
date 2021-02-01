@@ -128,12 +128,12 @@
   display: inline-block;
 
   &:focus {
-    outline: 1px dotted #fff;
+    outline: 1px dotted $outline-color;
   }
 
   &__img {
     @media (max-width: $screen-sm-max) {
-      width: 75px
+      width: 75px;
     }
   }
 }
