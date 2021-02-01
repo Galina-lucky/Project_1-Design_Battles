@@ -1,0 +1,79 @@
+$COLOR_WHITE: #fff;
+$COLOR_PINK: #e71cb4;
+
+$dark-grey: #444;
+$black: #000;
+$dark-purple: #460340;
+$light-gray: #eee;
+$pale-gray: #ddd;
+$dark-pink: #c60ebe;
+
+// Background color
+$bg-color-primary: $COLOR_WHITE;
+$bg-color-secondary: $black;
+$bg-color-enumerator: $dark-purple;
+$bg-color-footer: $light-gray;
+
+// Fonts
+$font-family-base: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+$font-family-secondary: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+$line-height: 1.2;
+
+$base-font-size: 16px;
+$logo-font-size: 33.51px;
+$h1-font-size: 60px;
+$h2-font-size: 62px;
+$h3-font-size: 36px;
+$h4-font-size: 30px;
+$xxlg-font-size: 40px;
+$xlg-font-size: 32px;
+$xl-font-size: 24px;
+$md-font-size: 22px;
+$sm-font-size: 14px;
+//$xs-font-size: 13px;
+
+// Font color
+$font-color-primary: $dark-grey;
+$font-color-secondary: $COLOR_WHITE;
+$h2-color: $COLOR-PINK;
+
+//Controls
+$btn-border-color: $pale-gray;
+$btn-bg-color: $dark-pink;
+
+//Main menu color
+$font-color-menu: $COLOR_PINK;
+$color-btn-toggle-menu: $COLOR_WHITE;
+
+
+
+$input-color: $dark-grey;
+
+
+$link-active-color: $COLOR_PINK;
+
+
+
+//Breakpoints
+$screen-xs:                  320px;
+$screen-xs-min:              $screen-xs;
+
+$screen-sm:                  576px;
+$screen-sm-min:              $screen-sm;
+
+$screen-md:                  768px;
+$screen-md-min:              $screen-md;
+
+$screen-lg:                  992px;
+$screen-lg-min:              $screen-lg;
+
+$screen-xlg:                 1200px;
+$screen-xlg-min:             $screen-xlg;
+
+$screen-xs-max:              ($screen-sm-min - 1); // до 575
+$screen-sm-max:              ($screen-md-min - 1); // до 767
+$screen-md-max:              ($screen-lg-min - 1); // до 991
+$screen-lg-max:              ($screen-xlg-min - 1); // до 1199
+
+
+$color-list-number: (1: #ffde16, 2: #ffbd9e, 3: #20c9e0, 4: #2eac66, 5: #ff6179, 6: #ffde16)

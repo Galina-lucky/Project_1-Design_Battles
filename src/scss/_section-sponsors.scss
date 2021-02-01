@@ -1,0 +1,26 @@
+.section-sponsors {
+	padding-top: 90px;
+	padding-bottom: 112px;
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+
+  &__item {
+    
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      box-shadow: 0 0 10px $font-color-primary;
+    }
+
+    &:active {
+      box-shadow: 0 0 10px $dark-grey;
+    }
+  }
+}

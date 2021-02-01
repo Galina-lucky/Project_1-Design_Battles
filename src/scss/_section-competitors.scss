@@ -1,0 +1,48 @@
+.section-competitors {
+	padding-top: 150px;
+	padding-bottom: 120px;
+	background: linear-gradient(to bottom, #339 0, #f0c 100%);
+	color: $font-color-secondary;
+	text-align: center;
+
+	&__description {
+		margin-bottom: 45px;
+	}
+
+	&__list-cards {
+    margin-bottom: 40px;
+	}
+}
+
+.enumerator {
+	max-width: 860px;
+	margin-left: auto;
+  margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: $font-family-secondary;
+
+	&__item {
+		padding: 33px 38px 25px 38px;
+		background-color: $bg-color-enumerator;
+		flex: 0 0 18.5%;
+		line-height: 1;
+
+		&--outline {
+      background-color: transparent;
+      border: 2px solid #faaced;
+		}
+	}
+
+  &__number {
+		font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 12px;
+	}
+
+	&__dimension {
+    font-size: 18px;
+    text-transform: uppercase;
+	}
+}

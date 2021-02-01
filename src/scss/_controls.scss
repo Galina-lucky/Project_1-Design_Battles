@@ -1,0 +1,122 @@
+@mixin hover-focus-active ($color-text, $color-fon) {
+  &:hover {
+    color: $color-fon;
+    background-color: $color-text;
+    border-color: $color-fon;
+    box-shadow: 0 0 15px $color-fon;
+  }
+  
+  &:focus {
+    background-color: lighten($color-fon, 25);
+    box-shadow: 0 0 15px darken($color-fon, 25);
+  }
+
+  &:active {
+    background-color: darken($color-fon, 15);
+  }
+}
+
+%controls-transition {
+	-webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,opacity .15s ease-in-out,-webkit-box-shadow .15s ease-in-out, visibility .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,opacity .15s ease-in-out, visibility .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,opacity .15s ease-in-out, visibility .15s ease-in-out;
+    cursor: pointer;
+}
+
+a,
+button,
+ {
+	@extend %controls-transition;
+}
+
+input {
+	&[type=button],
+	&[type=submit] {
+		 @extend %controls-transition;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+	min-width: 268px;
+	padding: 1em 1.25em;
+	font-size: $base-font-size;
+	font-weight: 400;	
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  background-color: transparent;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+  color: $font-color-secondary;
+	outline: none;
+	box-shadow: none;
+
+  &--primary {
+    background-color: $btn-bg-color;
+    border-color: $btn-bg-color;
+
+    @include  hover-focus-active ($font-color-secondary, $dark-pink);
+  }
+
+  &--secondary {
+    background-color: $input-color;
+    border-color: $input-color;
+  }
+
+  &--outline {
+    &:hover {
+      color: $font-color-secondary;
+      background-color: rgba(225, 225, 225, 0.4);
+      border-color: $pale-gray;
+      box-shadow: 0 0 15px $bg-color-primary;
+    }
+
+    &:focus {
+      background-color: rgba(225, 225, 225, 0.4);
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: rgba(225, 225, 225, 0.7);
+    }
+  }
+
+  &--for-contact {
+    text-transform: uppercase;
+    border-radius: 0;
+    position: relative;
+    bottom: 0px;
+    right: -220px;
+
+    @include  hover-focus-active ($font-color-secondary, $input-color);
+  }
+
+  &--s {
+    min-width: 135px;
+    font-weight: 700;
+  }
+
+  &--m {
+    min-width: 150px;
+    padding: 1.666666em 1.5em 1.666666em 2em;
+    font-size: 12px;
+  }
+
+  &--l {
+    min-width: 268px;
+  }
+
+  &--xl {
+    min-width: 458px;
+    font-size: 22px;
+  }
+}

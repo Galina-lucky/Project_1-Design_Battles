@@ -1,0 +1,102 @@
+.section-contact {
+	padding-top: 95px;
+	padding-bottom: 105px;
+
+	&__description {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 65%;
+		text-align: center;
+	}
+}
+
+.form-contact {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	max-width: 750px;
+	position: relative;
+
+  &__field {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+    position: relative;
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: $input-color;
+  }
+
+    &--big {
+      width: 84%;
+      font-size: 0;
+    }
+  }
+
+	&__input {
+	  padding-bottom: 10px;
+	  margin-bottom: 15px;
+		width: 100%;
+		position: relative;
+		font-size: 13px;
+		line-height: 1;
+		color: $input-color;
+		background-color: transparent;
+		border: none;
+		border-bottom: 6px solid $input-color;
+		outline: none;
+		z-index: 1;
+
+		&:hover {
+			border-bottom: 6px solid lighten($input-color, 30);
+		}
+
+		&:focus {
+		  border-bottom: 6px solid transparent;
+
+		  & + .form-contact__caption {
+        bottom: -5px;
+		  }
+	  }
+
+	  &:active {
+	  	border-bottom: 6px solid darken($input-color, 20);
+	  }
+
+	  &:valid + .form-contact__caption {
+      bottom: -5px;
+		}
+
+    &:invalid:not(:placeholder-shown) + .form-contact__caption  {
+      bottom: -5px;
+		}
+
+		&--message {
+	  	height: 175px;
+		  width: 100%;
+		  resize: none;
+    }
+	}
+
+	&__caption {
+		display: block;
+		position: absolute;
+		left: 15px;
+		bottom: 34px;
+		color: $input-color;
+		font-size: 13px;
+		padding-top: 7px;
+		transition: 0.3s;
+		z-index: 0;
+	}
+}
