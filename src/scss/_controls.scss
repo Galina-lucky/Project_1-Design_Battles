@@ -101,6 +101,10 @@ a {
   &--s {
     min-width: 135px;
     font-weight: 700;
+
+    @media (max-width: $screen-sm-max) {
+      width: 50%;
+    }
   }
 
   &--m {

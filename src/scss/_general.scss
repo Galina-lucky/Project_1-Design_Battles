@@ -84,8 +84,7 @@ body {
 .title {
   margin-bottom: 50px;
   font-size: $font-size-h2;
-  font-weight: $fw-bold;
-
+  
   @media (max-width: $screen-md-max) {
     margin-bottom: 40px;
     font-size: $font-size-h2*$k-md;

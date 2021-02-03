@@ -1,17 +1,40 @@
 .footer {
-	padding-top: 73px;
+	padding-top: 75px;
 	padding-bottom: 60px;
 	background-color: $bg-color-footer;
-  text-align: center;
+	text-align: center;
+
+	@media (max-width: $screen-sm-max) {  		
+		padding-top: 50px;
+		padding-bottom: 50px;
+	} 
 
 	&__title {
-		margin-bottom: 45px;
-		font-size: $h3-font-size;
-	}
+		font-size: $font-size-h3;
 
-	&__lead {
-    font-weight: 400;
+		@media (min-width: $screen-lg-min) {  		
+			margin-bottom: 45px;
+  	} 
+
+  	@media (max-width: $screen-md-max) {  		
+  		font-size: $font-size-h3*$k-md;
+  	}    
+
+  	@media (max-width: $screen-sm-max) {  		
+  		font-size: $font-size-h3*$k-sm;
+  	}   
+
+  	@media (max-width: $screen-xs-max) {  		
+  		font-size: $font-size-h3*$k-xs;
+  	}  
+  }
+
+	&__description {
     margin-bottom: 25px;
+
+    @media (max-width: $screen-sm-max) {  		
+  		margin-bottom: 15px;
+  	} 
 	}
 }
 
@@ -21,15 +44,46 @@
   font-size: 18px;
 	margin-bottom: 85px;
 
+	@media (max-width: $screen-lg-max) {
+		margin-bottom: 65px;
+	}
+
+	@media (max-width: $screen-md-max) {
+		margin-bottom: 45px;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 25px;
+	}
+
 	&__field {
+		min-width: 387px;
 		margin-right: 8px;
 		padding: 0.888888em 1.111111em 1em;
-		min-width: 387px;
-		line-height: 1;
-		background-color: $bg-color-primary;
+		outline: none;
 		border: 2px solid transparent;
 		border-radius: 10px;
-		outline: none;
+		background-color: $bg-color-primary;
+		font-size: 18px;
+		line-height: 1;
+
+		&::placeholder {
+			font-size: 18px;
+
+			@media (max-width: $screen-sm-max) {
+				font-size: $font-size-sm;
+			}
+		}	
+
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+			min-width: auto;
+			margin-bottom: 15px;
+			margin-right: 0;
+			font-size: $font-size-sm;
+		}
 
 		&:hover {
       border: 2px solid $input-color;
@@ -67,6 +121,11 @@
 		font-size: 18px;
 		color: $font-color-secondary;
 		outline: transparent;
+
+		@media (max-width: $screen-sm-max) {
+			width: 50px;
+    	height: 50px;
+		}
 
 		&:hover {
 			color: $btn-border-color;
