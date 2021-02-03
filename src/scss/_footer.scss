@@ -62,7 +62,6 @@
 		min-width: 387px;
 		margin-right: 8px;
 		padding: 0.888888em 1.111111em 1em;
-		outline: none;
 		border: 2px solid transparent;
 		border-radius: 10px;
 		background-color: $bg-color-primary;
@@ -86,9 +85,11 @@
 		}
 
 		&:hover {
-      border: 2px solid $input-color;
-      box-shadow: 0 0 15px lighten($input-color, 10);
-		}
+      @media (min-width: $screen-md-min) {
+        border: 2px solid $input-color;
+        box-shadow: 0 0 15px lighten($input-color, 10);
+      }
+    }
 
 		&:focus {
       box-shadow: 0 0 15px lighten($input-color, 10);
@@ -128,10 +129,12 @@
 		}
 
 		&:hover {
-			color: $btn-border-color;
-			background-color: $bg-color-primary;
-			box-shadow: 0 0 10px $btn-border-color;
-		}
+      @media (min-width: $screen-md-min) {
+       color: $btn-border-color;
+       background-color: $bg-color-primary;
+       box-shadow: 0 0 10px $btn-border-color;
+     }
+   }
 
 		&:focus {
 			color: $btn-border-color;

@@ -1,9 +1,11 @@
 @mixin hover-focus-active ($color-text, $color-fon) {
   &:hover {
-    color: $color-fon;
-    background-color: $color-text;
-    border-color: $color-fon;
-    box-shadow: 0 0 15px $color-fon;
+    @media (min-width: $screen-md-min) {
+      color: $color-fon;
+      background-color: $color-text;
+      border-color: $color-fon;
+      box-shadow: 0 0 15px $color-fon;
+    }    
   }
   
   &:focus {
@@ -54,30 +56,36 @@ a {
   cursor: pointer;
   background-image: none;
   background-color: transparent;
-	border: 2px solid #ddd;
+	border: 2px solid $btn-border-color;
 	border-radius: 10px;
   color: $font-color-secondary;
 	outline: none;
 	box-shadow: none;
 
   &--primary {
-    background-color: $btn-bg-color;
-    border-color: $btn-bg-color;
+    background-color: map-get($btn-bg-color, 1);
+    border-color: map-get($btn-bg-color, 1);
 
-    @include  hover-focus-active ($font-color-secondary, $dark-pink);
+    @include  hover-focus-active ($font-color-secondary, map-get($btn-bg-color, 1));
   }
 
   &--secondary {
-    background-color: $input-color;
-    border-color: $input-color;
+    background-color: map-get($btn-bg-color, 2);
+    border-color: map-get($btn-bg-color, 2);
+    border-radius: 0;
+    text-transform: uppercase;
+
+    @include  hover-focus-active ($font-color-secondary, map-get($btn-bg-color, 2));
   }
 
   &--outline {
     &:hover {
-      color: $font-color-secondary;
-      background-color: rgba(225, 225, 225, 0.4);
-      border-color: $pale-gray;
-      box-shadow: 0 0 15px $bg-color-primary;
+      @media (min-width: $screen-md-min) {
+        color: $font-color-secondary;
+        background-color: rgba(225, 225, 225, 0.4);
+        border-color: $btn-border-color;
+        box-shadow: 0 0 15px $bg-color-primary;
+      }
     }
 
     &:focus {
@@ -90,34 +98,22 @@ a {
     }
   }
 
-  &--for-contact {
-    text-transform: uppercase;
-    border-radius: 0;
-    margin-right: 30px;
-
-    @include  hover-focus-active ($font-color-secondary, $input-color);
-  }
-
-  &--s {
+  &--sm {
     min-width: 135px;
-    font-weight: 700;
+    font-weight: $fw-bold;
 
     @media (max-width: $screen-sm-max) {
       width: 50%;
     }
   }
 
-  &--m {
+  &--md {
     min-width: 150px;
     padding: 1.666666em 1.5em 1.666666em 2em;
     font-size: 12px;
   }
 
-  &--l {
-    min-width: 268px;
-  }
-
-  &--xl {
+  &--lg {
     min-width: 458px;
     font-size: 22px;
 
