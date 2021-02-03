@@ -1,24 +1,10 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-:after, :before {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
 html,
 body {
 	font-family: $font-family-base;
 	font-size: $base-font-size;
-	font-weight: 400;
-	line-height: $line-height;
+	font-weight: $fw-regular;
+	line-height: $line-height-base;
 	color: $font-color-primary;
-	height: auto;
-	background-color: $bg-color-primary;
 }
 
 h1,
@@ -29,16 +15,5 @@ h4
 	margin: 0;
 }
 
-.title {
-	margin-bottom: 60px;
-	font-size: $h2-font-size;
-	font-weight: 700;
-	text-align: center;
-}
 
-.description {
-	margin-bottom: 70px;
-	font-size: $md-font-size;
-	line-height: 1.818181;
-}
 

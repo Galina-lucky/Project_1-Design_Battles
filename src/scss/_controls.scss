@@ -118,5 +118,10 @@ a {
   &--xl {
     min-width: 458px;
     font-size: 22px;
+
+    @media (max-width: $screen-xs-max) {
+      min-width: auto;
+      font-size: 18px;
+    }
   }
 }

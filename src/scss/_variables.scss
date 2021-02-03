@@ -17,25 +17,41 @@ $bg-color-footer: $light-gray;
 // Fonts
 $font-family-base: 'Poppins', 'Arial', 'Helvetica', sans-serif;
 $font-family-secondary: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
-$line-height: 1.2;
+$line-height-base: 1.5;
+$line-height-lg: 1.818181;
+$line-height-md: 1.2;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
 
 $base-font-size: 16px;
 $logo-font-size: 33.51px;
-$h1-font-size: 60px;
-$h2-font-size: 62px;
-$h3-font-size: 36px;
-$h4-font-size: 30px;
-$xxlg-font-size: 40px;
-$xlg-font-size: 32px;
-$xl-font-size: 24px;
-$md-font-size: 22px;
-$sm-font-size: 14px;
+$font-size-h1: 65px;
+$font-size-h2: 62px;
+$font-size-h3: 36px;
+$font-size-h4: 30px;
+$font-size-xxxlg: 72px;
+$font-size-xxlg: 40px;
+$font-size-xlg: 32px;
+$font-size-lg: 24px;
+$font-size-md: 22px;
+$font-size-sm: 14px;
 //$xs-font-size: 13px;
 
 // Font color
 $font-color-primary: $dark-grey;
 $font-color-secondary: $COLOR_WHITE;
-$h2-color: $COLOR-PINK;
+$mapColorFont: (
+  titleSectionAbout: $COLOR-PINK, 
+/*  blog: #b07cf7, 
+  contact: #c0dcea, 
+  gallery: #ffe92f,
+  services: #70bfff,
+  subscribe: $WHITE,*/
+);
+
+/*$font-color-h2: $COLOR-PINK;*/
 
 //Controls
 $btn-border-color: $pale-gray;
@@ -47,14 +63,11 @@ $color-btn-toggle-menu: $COLOR_WHITE;
 
 $outline-color: $COLOR_WHITE;
 
-
-
 $input-color: $dark-grey;
-
 
 $link-active-color: $COLOR_PINK;
 
-
+$color-list-number: (1: #ffde16, 2: #ffbd9e, 3: #20c9e0, 4: #2eac66, 5: #ff6179, 6: #ffde16);
 
 //Breakpoints
 $screen-xs:                  320px;
@@ -77,5 +90,8 @@ $screen-sm-max:              ($screen-md-min - 1); // до 767
 $screen-md-max:              ($screen-lg-min - 1); // до 991
 $screen-lg-max:              ($screen-xlg-min - 1); // до 1199
 
-
-$color-list-number: (1: #ffde16, 2: #ffbd9e, 3: #20c9e0, 4: #2eac66, 5: #ff6179, 6: #ffde16)
+$k-xs: 0.6;
+$k-sm: 0.7;
+$k-md: 0.8;
+$k-lg: 0.9;
+$k-xlg: 1;

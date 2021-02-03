@@ -25,21 +25,25 @@
 	}
 
 	&__title {
-		font-size: $h1-font-size;
+		font-size: $font-size-h1;
 		margin-bottom: 18px;
 
+    @media (max-width: $screen-lg-max) {
+      font-size: 50px;
+    }
+
 	  @media (max-width: $screen-xs-max) {
-	    font-size: $xxlg-font-size;
+	    font-size: $font-size-xxlg;
 			margin-bottom: 14px;
 	  }
 	}
 
 	&__lead {
-    font-size: $h4-font-size;
+    font-size: $font-size-h4;
     margin-bottom: 70px;
 
     @media (max-width: $screen-xs-max) {
-	    font-size: $xl-font-size;
+	    font-size: $font-size-xlg;
 			margin-bottom: 30px;
 	  }
 	}

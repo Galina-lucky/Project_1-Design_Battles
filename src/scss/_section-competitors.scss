@@ -1,6 +1,4 @@
 .section-competitors {
-	padding-top: 150px;
-	padding-bottom: 120px;
 	background: linear-gradient(to bottom, #339 0, #f0c 100%);
 	color: $font-color-secondary;
 	text-align: center;
@@ -11,7 +9,15 @@
 
 	&__list-cards {
     margin-bottom: 40px;
-	}
+
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 25px;
+    } 
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 15px;
+    } 
+  }
 }
 
 .enumerator {
@@ -24,10 +30,26 @@
 	font-family: $font-family-secondary;
 
 	&__item {
-		padding: 33px 38px 25px 38px;
+		padding: 33px 38px 25px;
 		background-color: $bg-color-enumerator;
 		flex: 0 0 18.5%;
 		line-height: 1;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    @media (max-width: $screen-md-max) {
+      padding: 30px 25px 25px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 25px 20px 20px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding: 15px 10px;
+    }
 
 		&--outline {
       background-color: transparent;
@@ -36,13 +58,33 @@
 	}
 
   &__number {
-		font-size: 72px;
-    font-weight: 700;
+		font-size: $font-size-xxxlg;
+    font-weight: $fw-bold;
     margin-bottom: 12px;
+
+    @media (max-width: $screen-md-max) {
+      font-size: $font-size-xxxlg*$k-md;
+    } 
+
+    @media (max-width: $screen-sm-max) {
+      font-size: $font-size-xxxlg*$k-sm;
+    } 
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 35px;
+    } 
 	}
 
 	&__dimension {
     font-size: 18px;
     text-transform: uppercase;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 18px*$k-sm;
+    } 
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 10px;
+    } 
 	}
 }

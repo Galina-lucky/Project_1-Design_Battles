@@ -53,6 +53,7 @@
     menuLink.each( function() {
       let link = $(this).attr("href");
       let target = $(link);
+      console.log(link);
 
       if ( ((target.offset().top <= scrollTop)
         && (target.offset().top + target.outerHeight() > scrollTop))
