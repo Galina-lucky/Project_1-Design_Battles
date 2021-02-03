@@ -1,23 +1,20 @@
 .section-contact {
-	padding-top: 95px;
-	padding-bottom: 105px;
-
-	&__description {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 65%;
-		text-align: center;
-	}
+  text-align: center;
 }
 
 .form-contact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 	margin-left: auto;
 	margin-right: auto;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
 	max-width: 750px;
-	position: relative;
+/*  padding-left: 15px;
+  padding-right: 15px;*/
+
+  @media (max-width: $screen-xs-max) {
+    display: block;
+  }
 
   &__field {
     width: 50%;
@@ -26,19 +23,27 @@
     margin-bottom: 30px;
     position: relative;
 
-  &:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
-    height: 1px;
-    width: calc(100% - 30px);
-    background-color: $input-color;
-  }
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+
+    &:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      height: 1px;
+      width: calc(100% - 30px);
+      background-color: $input-color;
+    }
 
     &--big {
-      width: 84%;
+      width: 100%;
       font-size: 0;
     }
   }
@@ -51,7 +56,7 @@
 		font-size: 13px;
 		line-height: 1;
 		color: $input-color;
-		background-color: transparent;
+		background-color: transparent !important;
 		border: none;
 		border-bottom: 6px solid $input-color;
 		outline: none;
@@ -98,5 +103,9 @@
 		padding-top: 7px;
 		transition: 0.3s;
 		z-index: 0;
+
+    &--bottom {
+      bottom: -5px;
+    }
 	}
 }

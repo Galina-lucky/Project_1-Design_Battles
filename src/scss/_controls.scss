@@ -93,9 +93,7 @@ a {
   &--for-contact {
     text-transform: uppercase;
     border-radius: 0;
-    position: relative;
-    bottom: 0px;
-    right: -220px;
+    margin-right: 30px;
 
     @include  hover-focus-active ($font-color-secondary, $input-color);
   }

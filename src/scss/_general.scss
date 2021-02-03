@@ -1,6 +1,6 @@
-* {
+/** {
   outline: 1px solid red;
-}
+}*/
 
 * {
   margin: 0;
@@ -85,7 +85,6 @@ body {
   margin-bottom: 50px;
   font-size: $font-size-h2;
   font-weight: $fw-bold;
-  //text-align: center;
 
   @media (max-width: $screen-md-max) {
     margin-bottom: 40px;
@@ -139,7 +138,7 @@ body {
       min-width: 208px;
     }
 
-/*    &--round {
+    /*    &--round {
       height: 357px;
       width: 357px;
       background-image: url(../img/jury_1.jpg);

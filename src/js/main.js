@@ -12,6 +12,7 @@
     getNavTopSize();
     smoothScroll();
     setMenuStiky();
+    checksInputEmptiness()
     hideMobileMenu();
     
     menuBtn.on('click', function() {
@@ -47,13 +48,13 @@
       : nav.removeClass('nav--stiky');
   }
 
-   function showActiveMenuItem() {
+  // Show active menu item when scrolling
+  function showActiveMenuItem() {
     let scrollTop = $(window).scrollTop();
     
     menuLink.each( function() {
       let link = $(this).attr("href");
       let target = $(link);
-      console.log(link);
 
       if ( ((target.offset().top <= scrollTop)
         && (target.offset().top + target.outerHeight() > scrollTop))
@@ -80,7 +81,7 @@
     });
   }  
 
-  //Smooth scrolling
+  // Smooth scrolling
   function smoothScroll() {
     menuLink.on('click', function (event) {
       event.preventDefault();
@@ -93,7 +94,18 @@
     });
   }
 
+  // Checks the input for emptiness and places the label
+  function checksInputEmptiness() {
+    let input = $('.js-form-contact__input');
 
+    input.on('blur', function() {
+      let idInput = $(this).attr("id");
+      let label = $('.js-form-contact__caption[for="' + idInput +'"]');
+      let val = $(this).val();
 
-
+      (val.length >= 1)
+      ? label.addClass('form-contact__caption--bottom')
+      : label.removeClass('form-contact__caption--bottom');
+    });
+  }
 })();
