@@ -1,6 +1,6 @@
-/** {
+* {
   outline: 1px solid red;
-}*/
+}
 
 * {
   margin: 0;
@@ -125,14 +125,28 @@ body {
 
 .card { 
   display: block;
+  padding-left: 15px;
+  padding-right: 15px;
 
 	&__avatar {
+    margin-left: auto;
+    margin-right: auto;
 		margin-bottom: 20px;
 		border-radius: 10px;
 
     @media (max-width: $screen-sm-max) {
       margin-bottom: 10px;
-    } 
+      min-width: 208px;
+    }
+
+/*    &--round {
+      height: 357px;
+      width: 357px;
+      background-image: url(../img/jury_1.jpg);
+      background-position-x: center;
+      background-position-y: 30%;
+      border-radius: 50%;
+    }*/
 	}
 
 	&__name {
@@ -141,15 +155,27 @@ body {
     font-weight: $fw-bold;
     line-height: 1.5;
 
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
       margin-bottom: 10px;
+      font-size: $font-size-xlg*$k-md;
+    } 
+
+    @media (max-width: $screen-sm-max) {      
       font-size: $font-size-xlg*$k-sm;
+    } 
+
+    @media (max-width: $screen-xs-max) {      
+      font-size: $font-size-xlg*$k-xs;
     } 
   }
 
 	&__position {
 		overflow: hidden;
 	  text-overflow: ellipsis; 
+
+    @media (max-width: $screen-sm-max) {      
+      font-size: $font-size-sm;
+    } 
 	}
 }
 
@@ -158,14 +184,10 @@ body {
 	flex-flow: row wrap;
 	justify-content: center;
 	list-style: none;
-  padding-left: -15px;
-  padding-right: -15px;
 
   &__item {
     flex: 0 0 33%;
     margin-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
 
     @media (max-width: $screen-sm-max) {
       margin-bottom: 15px;
