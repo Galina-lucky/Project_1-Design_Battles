@@ -1,28 +1,24 @@
-.header {
-	padding-top: 300px;
-	padding-bottom: 260px;
+.header {  
+	padding-top: 340px;
 	background-color: $bg-color-secondary;
+  background: url(/img/fon-header.jpg) center center no-repeat;
+  background-size: cover;
 	text-align: center;  
+  color: $font-color-secondary;  
 
 	@media (min-width: $screen-md-min) {
-    background: url(/img/fon-header.jpg) center center no-repeat;
-    background-size: cover;
     min-height: 100vh;
   }
 
   @media (max-width: $screen-sm-max) {
-    padding-top: 135px;
-    padding-bottom: 70px;
+    padding-top: 120px;
+    padding-bottom: 65px;
   }
 
   @media (max-width: $screen-xs-max) {
-    padding-top: 120px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 45px;;
   }
-
-	&__info {
-		color: $font-color-secondary;
-	}
 
 	&__title {
 		font-size: $font-size-h1;
@@ -39,19 +35,16 @@
 	}
 
 	&__lead {
-    font-size: $font-size-h4;
+    font-size: $font-size-xlg;
     margin-bottom: 70px;
 
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 50px;
+    }
+
     @media (max-width: $screen-xs-max) {
-	    font-size: $font-size-xlg;
+	    font-size: $font-size-lg;
 			margin-bottom: 30px;
 	  }
 	}
 }
-
-
-
-
-
-
-

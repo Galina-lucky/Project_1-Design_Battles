@@ -1,19 +1,50 @@
 html,
 body {
+  height: auto;
+  background-color: $bg-color-primary;
 	font-family: $font-family-base;
-	font-size: $base-font-size;
+	font-size: $font-size-base;
 	font-weight: $fw-regular;
 	line-height: $line-height-base;
 	color: $font-color-primary;
 }
 
-h1,
-h2,
-h3,
-h4
-{
-	margin: 0;
+.title {
+  margin-bottom: 50px;
+  font-size: $font-size-h2;
+  
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 40px;
+    font-size: $font-size-h2*$k-md;
+  }    
+
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 30px;
+    font-size: $font-size-h2*$k-sm;
+  }   
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 20px;
+    font-size: $font-size-h2*$k-xs;
+  }  
 }
 
+.description {
+  margin-bottom: 70px;
+  font-size: $font-size-md;
+  line-height: $line-height-lg;
 
+  @media (max-width: $screen-lg-max) {
+    margin-bottom: 60px;
+  }    
 
+  @media (max-width: $screen-md-max) {
+    font-size: $font-size-md*$k-md;
+    line-height: $line-height-base;
+  }    
+
+  @media (max-width: $screen-sm-max) {
+    font-size: $font-size-md*$k-sm;
+    margin-bottom: 40px;
+  }   
+}

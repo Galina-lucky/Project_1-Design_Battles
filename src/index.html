@@ -2,59 +2,66 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Design Battles</title>
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta content="" name="keywords"/>
 	<link rel="icon" href="/img/icon.ico">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<title>Design Battles</title>
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+	<!-- Animation -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<link rel="stylesheet" href="/css/main.min.css">
 </head>
 <body>
-	<header class="header">		
-		<nav class="nav js-nav">
-			<div class="container">
-				<div class="navbar">
-					<div class="nav__header">
-						<a class="logo" href="#">
-							<img class="logo__img img-responsive" src="img/logo.svg" alt="logo">
-						</a>
-						<button class="btn-toggle-menu js-btn-toggle-menu">
-							<span class="btn-toggle-menu__item js-btn-toggle-menu__item">Toggle menu</span>
-						</button>
-					</div>
-					<ul class="menu nav__menu js-menu">
-						<li class="menu__item">
-							<a class="menu__link menu__link--active js-menu__link" href="#about">About</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link js-menu__link" href="#competitors">Competitors</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link js-menu__link" href="#jury">Jury</a>
-						</li>
-						<li class="menu__item">
-							<a class="menu__link js-menu__link" href="#contact">Contact Us</a>
-						</li>
-					</ul>
-				</div>
-			</div>          
-		</nav>
+	<nav class="nav js-nav">
 		<div class="container">
+			<div class="navbar">
+				<div class="nav__header">
+					<a class="logo" href="#">
+						<img class="logo__img img-responsive" src="img/logo.svg" alt="logo">
+					</a>
+
+					<button class="btn-toggle-menu js-btn-toggle-menu">
+						<span class="btn-toggle-menu__item js-btn-toggle-menu-item">Toggle menu</span>
+					</button>
+				</div> <!-- / .nav__header -->
+
+				<ul class="menu nav__menu js-menu">
+					<li class="menu__item">
+						<a class="menu__link menu__link--active js-menu-link" href="#about">About</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link js-menu-link" href="#competitors">Competitors</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link js-menu-link" href="#jury">Jury</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link js-menu-link" href="#contact">Contact Us</a>
+					</li>
+				</ul>
+			</div>  <!-- / .navbar -->
+		</div>
+	</nav>
+
+	<header class="header">
+		<div class="container">			
 			<div class="row">
-				<div class="col-lg-10 col-lg-offset-1">
-					<div class="header__info">
-						<h1 class="header__title">Are you ready for the Battle?</h1>
-						<p class="header__lead">The clash between graphic designers</p>
-						<button class="btn btn--outline">Download Our Case Study</button>
-					</div>
+				<div class="col-lg-10 col-lg-offset-1">					
+					<h1 class="header__title">Are you ready for the Battle?</h1>
+					<p class="header__lead">The clash between graphic designers</p>
+					<button class="btn btn--outline">Download our case study</button>
 				</div>
-			</div>			
+			</div>  <!-- / .row -->
 		</div>
 	</header>
-	 <main>
+
+	<main>
 		<section id="about" class="section-about section section--xlg">
 			<div class="container">
 				<h2 class="section-about__title title">Design Battles</h2>
@@ -62,6 +69,7 @@
 					Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
 			  </p>
 				<h3 class="section-about__title-list">What is the course of the Battles?</h3>
+
 				<ol class="list-increment">
 					<li class="list-increment__item">Cras ultricies ligula sed mag.</li>
 					<li class="list-increment__item">Pellentesque in ipsum id orci porta dapibus.</li>
@@ -70,56 +78,61 @@
 					<li class="list-increment__item">Proin eget tortor risus.</li>
 					<li class="list-increment__item">Nulla quis lorem ut libero malesuada feugiat.</li>
 				</ol>
+
 				<p class="description">
 					Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
 				</p>	
 				<h4 class="section-about__date">
-					Submissions starts on 10/12/2017 and end on 11/12/2017
+					Submissions starts on 10/12/2020 and end on 11/12/2020
 				</h4>
 				<p class="section-about__date-description">
 					Nulla quis lorem ut libero malesuada feugiat eget tincidunt nibh pulvinar.
 				</p>
-				<button class="btn btn--primary btn--lg">Download Our Case Study</button>
+
+				<button class="btn btn--primary btn--lg">Download our case study</button>
 			</div>
 		</section>
+
 		<section id="competitors" class="section-competitors section section--lg">
 			<div class="container">
 				<h2 class="title">They already said Battles</h2>
 				<p class="description section-competitors__description">
 					Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Estibulum ante ipsum primis in faucibus orci luctus et ultrices.
 			  </p>
+
 			  <ul class="list-cards section-competitors__list-cards">
-			  	<li class="card list-cards__item">
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200">
 			  		<img class="card__avatar img-responsive" src="/img/competitor_1.jpg" alt="competitor">
-			  		<p class="card__name">John Stone</p>
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	<li class="card list-cards__item">
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="200">
 			  		<img class="card__avatar img-responsive" src="/img/competitor_2.jpg" alt="competitor">
-			  		<p class="card__name">John Stone</p>
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	<li class="card list-cards__item">
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="400">
 			  		<img class="card__avatar img-responsive" src="/img/competitor_3.jpg" alt="competitor">
-			  		<p class="card__name">John Stone</p>
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	<li class="card list-cards__item">
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="600">
 			  		<img class="card__avatar img-responsive" src="/img/competitor_4.jpg" alt="competitor">
-			  		<p class="card__name">John Stone</p>
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	<li class="card list-cards__item">
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="800">
 			  		<img class="card__avatar img-responsive" src="/img/competitor_5.jpg">
-			  		<p class="card__name">John Stone</p>
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	<li class="card list-cards__item">
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="1000">
 			  		<img class="card__avatar img-responsive" src="/img/competitor_6.jpg">
-			  		<p class="card__name">John Stone</p>
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
 			  </ul>
+
 				<h2 class="title">Countdown</h2>
 				<div class="enumerator">
 		  	  <div class="enumerator__item enumerator__item--outline">
@@ -138,59 +151,62 @@
 			  		<p class="enumerator__number">26</p>
 			  		<p class="enumerator__dimension">seconds</p>
 			  	</div>
-		    </div>
+		    </div> <!-- / .enumerator -->
 		  </div>
 		</section>
+
 		<section class="section-sponsors section">
 			<div class="container">
 				<h2 class="title">Sponsorship</h2>
+
 				<ul class="sponsors">
 					<li class="sponsors__item">
-						<a class="sponsors__link" href="https://speckyboy.com/">
-							<img class="img-responsive" src="/img/sponsor_1.jpg" alt="Sponsor Speckyboy">
+						<a class="sponsors__link" href="https://speckyboy.com">
+							<img class="sponsors__logo img-responsive" src="/img/sponsor_1.jpg" alt="Sponsor Speckyboy">
 						</a>
 					</li>
 					<li class="sponsors__item">
 						<a class="sponsors__link" href="#">
-							<img src="/img/sponsor_2.jpg" alt="Sponsor DWB">
+							<img class="sponsors__logo img-responsive" src="/img/sponsor_2.jpg" alt="Sponsor DWB">
 						</a>
 					</li>
 					<li class="sponsors__item">
 						<a class="sponsors__link" href="https://webdesignledger.com/">
-							<img src="/img/sponsor_3.jpg" alt="Sponsor Webdesignledger">
+							<img class="sponsors__logo img-responsive" src="/img/sponsor_3.jpg" alt="Sponsor Webdesignledger">
 						</a>
 					</li>
 					<li class="sponsors__item">
 						<a class="sponsors__link" href="http://www.instantshift.com/">
-							<img src="/img/sponsor_4.jpg" alt="Sponsor Instantshift">
+							<img class="sponsors__logo img-responsive" src="/img/sponsor_4.jpg" alt="Sponsor Instantshift">
 						</a>
 					</li>
 				</ul>
 			</div>
 		</section>
+
 		<section id="jury" class="section-jury section section--sm">
 			<div class="container">
 				<h2 class="title">Jury 2020</h2>
 				<ul class="list-cards">
-			  	<li class="card list-cards__item">
-			  		<!-- <div class="card__avatar card__avatar--round"></div> -->
-			  		<img class="card__avatar img-responsive" src="/img/jury_1.png" alt="jury">
-			  		<p class="card__name">John Stone</p>
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200">
+			  		<img class="card__avatar card__avatar--round img-responsive" src="/img/jury_1.jpg" alt="jury">
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	 <li class="card list-cards__item">
-			  		<img class="card__avatar img-responsive" src="/img/jury_2.png" alt="jury">
-			  		<p class="card__name">John Stone</p>
+			  	 <li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="200">
+			  		<img class="card__avatar card__avatar--round img-responsive" src="/img/jury_2.jpg" alt="jury">
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
-			  	<li class="card list-cards__item">
-			  		<img class="card__avatar img-responsive" src="/img/jury_3.png" alt="jury">
-			  		<p class="card__name">John Stone</p>
+			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="400">
+			  		<img class="card__avatar card__avatar--round img-responsive" src="/img/jury_3.jpg" alt="jury">
+			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li> 
 			  </ul>
 			</div>
 		</section>
+
 		<section id="contact" class="section-contact section section--sm">
 			<div class="container">
 				<div class="row">
@@ -200,45 +216,53 @@
 							Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada.
 						</p>
 					</div>
-				</div>
+				</div> <!-- / .row -->
 				
 				<form class="form-contact">
 					<div class="form-contact__field">
-						<input id="first-name" class="form-contact__input js-form-contact__input" name="first-name" required type="text" pattern="[A-Za-z]" value="" placeholder=" ">
-						<label class="form-contact__caption js-form-contact__caption" for="first-name">First name</label>
+						<input id="first_name" class="form-contact__input js-form-contact-input" name="first-name" required type="text" value="">
+						<label class="form-contact__caption js-form-contact-caption" for="first_name">First name</label>
 					</div>
+
           <div class="form-contact__field">
-            <input id="last-name" class="form-contact__input js-form-contact__input" name="last-name" required type="text" pattern="[A-Za-z]" value="" placeholder=" ">
-            <label class="form-contact__caption js-form-contact__caption" for="last-name">Last name</label>
+            <input id="last_name" class="form-contact__input js-form-contact-input" name="last-name" required type="text"  value="">
+            <label class="form-contact__caption js-form-contact-caption" for="last_name">Last name</label>
           </div>
+
           <div class="form-contact__field">
-            <input id="email" class="form-contact__input js-form-contact__input" name="email" required type="email" value="" placeholder=" ">
-            <label class="form-contact__caption js-form-contact__caption" for="email">Email</label>
+            <input id="email" class="form-contact__input js-form-contact-input" name="email" required type="email" value="">
+            <label class="form-contact__caption js-form-contact-caption" for="email">Email</label>
           </div>
+
           <div class="form-contact__field">
-            <input id="website" class="form-contact__input js-form-contact__input" name="website" required="" type="text" value="" placeholder=" ">
-            <label class="form-contact__caption js-form-contact__caption" for="website">Website</label>
+            <input id="website" class="form-contact__input js-form-contact-input" name="website" type="text" value="">
+            <label class="form-contact__caption js-form-contact-caption" for="website">Website</label>
           </div>
+
           <div class="form-contact__field form-contact__field--big">
-            <textarea id="message" class="form-contact__input form-contact__input--message js-form-contact__input" name="message" required="" value="" placeholder=" "></textarea>
-            <label class="form-contact__caption js-form-contact__caption" for="message">Message</label>
+            <textarea id="message" class="form-contact__input form-contact__input--message js-form-contact-input" name="message" value=""></textarea>
+            <label class="form-contact__caption js-form-contact-caption" for="message">Message</label>
           </div>
+
           <button class="btn btn--secondary btn--md form-contact__btn" type="submit">Send Message</button>
         </form>
 			</div>
 		</section> 
-	</main> 
+	</main>
+
 	<footer class="footer">
 		<div class="container">
-			<h3 class="footer__title title">Newsletter</h3>
+			<h2 class="footer__title title">Newsletter</h2>
 			<p class="footer__description">If you would like to hear first and to receive updates please subscribe to our newsletter.</p>
-			<form class="form-subscribe">
+
+			<form class="form-subscribe footer__form">
 				<input class="form-subscribe__field" type="email" name="email" placeholder="email address" required value="">
 				<button class="btn btn--primary btn--sm" type="submit">Subscribe</button>
 			</form>
+
 			<ul class="social-list">
 				<li class="social-list__item">
-					<a class="social-list__icon" href="https://twitter.com/explore" title="Поделиться в Twitter">
+					<a class="social-list__icon" href="https://twitter.com/explore" title="Twitter">
 						<i class="fab fa-twitter"></i>
 					</a>
 				</li>
@@ -248,7 +272,7 @@
 					</a>
 				</li>
 				<li class="social-list__item">
-					<a class="social-list__icon" href="https://www.instagram.com/?hl=ru" title="Поделиться в Instagram">
+					<a class="social-list__icon" href="https://www.instagram.com/?hl=ru" title="Instagram">
 						<i class="fab fa-instagram"></i>
 					</a>
 				</li>
@@ -260,6 +284,9 @@
 			</ul>					
 		</div>
 	</footer>
+
+	<!-- Animation -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	
 	<script src="/js/main.min.js"></script>
 </body>

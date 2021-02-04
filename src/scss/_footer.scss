@@ -1,7 +1,7 @@
 .footer {
 	padding-top: 75px;
 	padding-bottom: 60px;
-	background-color: $bg-color-footer;
+	background-color: $color-light-gray;
 	text-align: center;
 
 	@media (max-width: $screen-sm-max) {  		
@@ -11,22 +11,11 @@
 
 	&__title {
 		font-size: $font-size-h3;
+    line-height: $line-height-md;
 
 		@media (min-width: $screen-lg-min) {  		
 			margin-bottom: 45px;
   	} 
-
-  	@media (max-width: $screen-md-max) {  		
-  		font-size: $font-size-h3*$k-md;
-  	}    
-
-  	@media (max-width: $screen-sm-max) {  		
-  		font-size: $font-size-h3*$k-sm;
-  	}   
-
-  	@media (max-width: $screen-xs-max) {  		
-  		font-size: $font-size-h3*$k-xs;
-  	}  
   }
 
 	&__description {
@@ -36,26 +25,33 @@
   		margin-bottom: 15px;
   	} 
 	}
+
+  &__form {
+    margin-bottom: 85px;
+    @media (max-width: $screen-lg-max) {
+      margin-bottom: 65px;
+    }
+
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 55px;
+    }
+  }
+
+  
+
+  /*@media (max-width: $screen-sm-max) {
+    margin-bottom: 25px;
+  }*/
 }
 
 .form-subscribe {
   display: flex;
   justify-content: center;	
-  font-size: 18px;
-	margin-bottom: 85px;
+  font-size: 18px;	
 
-	@media (max-width: $screen-lg-max) {
-		margin-bottom: 65px;
-	}
-
-	@media (max-width: $screen-md-max) {
-		margin-bottom: 45px;
-	}
-
-	@media (max-width: $screen-sm-max) {
+	@media (max-width: $screen-xs-max) {
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 25px;
 	}
 
 	&__field {
@@ -76,13 +72,13 @@
 			}
 		}	
 
-		@media (max-width: $screen-sm-max) {
-			width: 100%;
-			min-width: auto;
-			margin-bottom: 15px;
-			margin-right: 0;
-			font-size: $font-size-sm;
-		}
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      min-width: auto;
+      margin-right: 0;
+      margin-bottom: 15px;
+      font-size: $font-size-sm;
+    }
 
 		&:hover {
       @media (min-width: $screen-md-min) {
@@ -96,7 +92,7 @@
 		}
 
 		&:active {
-      background-color: darken($bg-color-footer, 25);
+      background-color: darken($color-light-gray, 25);
 		}
 	}
 }
@@ -116,8 +112,8 @@
 		align-items: center;
 		width: 64px;
 		height: 64px;
-		background-color: $btn-border-color;
-		border: 2px solid $btn-border-color;
+		background-color: $color-pale-gray;
+		border: 2px solid $color-pale-gray;
 		border-radius: 50%;
 		font-size: 18px;
 		color: $font-color-secondary;
@@ -130,22 +126,22 @@
 
 		&:hover {
       @media (min-width: $screen-md-min) {
-       color: $btn-border-color;
+       color: $color-pale-gray;
        background-color: $bg-color-primary;
-       box-shadow: 0 0 10px $btn-border-color;
+       box-shadow: 0 0 10px $color-pale-gray;
      }
    }
 
 		&:focus {
-			color: $btn-border-color;
+			color: $color-pale-gray;
 			background-color: $bg-color-primary;
-      box-shadow: 0 0 10px darken($btn-border-color, 35);
+      box-shadow: 0 0 10px darken($color-pale-gray, 35);
 		}
 
 		&:active {
 			color: $font-color-secondary;
-			border-color: darken($btn-border-color, 25);
-			background-color: darken($btn-border-color, 10);
+			border-color: darken($color-pale-gray, 25);
+			background-color: darken($color-pale-gray, 10);
 		}
 	}
 }

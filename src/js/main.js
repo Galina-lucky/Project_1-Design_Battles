@@ -4,10 +4,16 @@
 
   let nav = $('.js-nav');
   let menu = $('.js-menu');
-  let menuLink = $('.js-menu__link');
+  let menuLink = $('.js-menu-link');
   let menuBtn = $('.js-btn-toggle-menu');
+  let navTop;
 
   $(document).ready(function() {
+
+    AOS.init({
+      disable: 'mobile',
+      once: true
+    });
 
     getNavTopSize();
     smoothScroll();
@@ -55,6 +61,7 @@
     menuLink.each( function() {
       let link = $(this).attr("href");
       let target = $(link);
+      $(this).blur();
 
       if ( ((target.offset().top <= scrollTop)
         && (target.offset().top + target.outerHeight() > scrollTop))
@@ -72,7 +79,7 @@
 
   // Hide menu in mobile version
   function hideMobileMenu() {
-    let el = $('.js-btn-toggle-menu__item');    
+    let el = $('.js-btn-toggle-menu-item');    
 
     $(document).click(function (e) {
       if ( !menuBtn.is(e.target)  && !el.is(e.target)  && !menu.is(e.target) && menu.hasClass('menu--show') ) {
@@ -96,11 +103,11 @@
 
   // Checks the input for emptiness and places the label
   function checksInputEmptiness() {
-    let input = $('.js-form-contact__input');
+    let input = $('.js-form-contact-input');
 
     input.on('blur', function() {
       let idInput = $(this).attr("id");
-      let label = $('.js-form-contact__caption[for="' + idInput +'"]');
+      let label = $('.js-form-contact-caption[for="' + idInput +'"]');
       let val = $(this).val();
 
       (val.length >= 1)

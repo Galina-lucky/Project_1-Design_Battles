@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   top: 0;
-  margin-bottom: 0;
+ // margin-bottom: 0;
   padding-bottom: 5px;
   padding-top: 5px;
   width: 100%;
@@ -23,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    flex-grow: 1;
   }
 
   &__logo {
@@ -51,7 +51,7 @@
 
   @media (max-width: $screen-sm-max) {
     position: absolute;
-    top: 55px;
+    top: 50px;
     right: 0;
     max-width: 250px;
     margin-right: 0;
@@ -87,6 +87,10 @@
     font-weight: 500;
     white-space: nowrap;
 
+    @media (max-width: $screen-sm-max) {
+      border-bottom: 1px dotted $btn-toggle-menu-color;
+    }
+
     &:before {
       content: "";
       display: block;
@@ -94,20 +98,18 @@
       left: 15px;
       bottom: 0; 
       height: 2px;
-      width: 0;
-      background-color: $font-color-menu;
-      transition: 0.5s ease width, 0.5s ease color;
-    }
-
-    @media (max-width: $screen-md-max) {
-      border-bottom: 1px dotted $btn-toggle-menu-color;
-    }
+      width: calc(100% - 30px);
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      background-color: $color-pink;
+      transition: 0.5s ease transform, 0.5s ease color;
+    }    
 
     &:focus {
-      color: $font-color-menu;
-      outline: 1px dotted $font-color-menu;
+      color: $color-pink;
+      outline: 1px dotted $color-pink;
 
-      @media (max-width: $screen-md-max) {
+      @media (max-width: $screen-sm-max) {
         box-shadow: 0 0 6px 2px $btn-toggle-menu-color;
         color: $font-color-secondary;
       }
@@ -115,38 +117,36 @@
 
     &:hover {
       @media (min-width: $screen-md-min) {
-        color: $font-color-menu;
+        color: $color-pink;
 
         &:before {
-          width: calc(100% - 30px);                 
+          transform: scaleX(1);            
         }
       }
     }
     
     &:active {
-      color: darken($font-color-menu, 10);
-      outline: 1px dotted $font-color-menu;
-      box-shadow: 0 0 10px 4px $font-color-menu;
+      color: darken($color-pink, 10);
+      outline: 1px dotted $color-pink;
+      box-shadow: 0 0 10px 4px $color-pink;
 
       @media (max-width: $screen-md-max) {
         box-shadow: 0 0 10px 3px $btn-toggle-menu-color;
         color: $font-color-secondary;        
       }
-    }    
+    }
+
+    &--active {
+      color: $color-pink;
+    }  
   }
 }
 
 .logo {
-  display: inline-block;
+  padding: 7px;
 
   &:focus {
     outline: 1px dotted $btn-toggle-menu-color;
-  }
-
-  &__img {
-    @media (max-width: $screen-sm-max) {
-      width: 75px;
-    }
   }
 }
 

@@ -1,20 +1,26 @@
-$COLOR_WHITE: #fff;
-$COLOR_PINK: #e71cb4;
+$WHITE: #fff;
+$PINK: #e71cb4;
+$DARK-PINK: #c60ebe;
+$DARK-PURPLE: #460340;
+$LIGHT-GRAY: #eee;
+$PALE-GRAY: #ddd;
+$DARK-GRAY: #444;
+$BLACK: #000;
 
-$dark-grey: #444;
-$black: #000;
-$dark-purple: #460340;
-$light-gray: #eee;
-$pale-gray: #ddd;
-$dark-pink: #c60ebe;
+$color-white: $WHITE;
+$color-pink: $PINK;
+$color-dark-pink: $DARK-PINK;
+$color-dark-purple: $DARK-PURPLE;
+$color-light-gray: $LIGHT-GRAY;
+$color-pale-gray: $PALE-GRAY;
+$color-dark-gray: $DARK-GRAY;
+$color-black: $BLACK;
 
 // Background color
-$bg-color-primary: $COLOR_WHITE;
-$bg-color-secondary: $black;
-$bg-color-enumerator: $dark-purple;
-$bg-color-footer: $light-gray;
-
-// Fonts
+$bg-color-primary: $WHITE;
+$bg-color-secondary: $BLACK;
+ 
+ // Fonts
 $font-family-base: 'Poppins', 'Arial', 'Helvetica', sans-serif;
 $font-family-secondary: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 $line-height-base: 1.5;
@@ -25,8 +31,7 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-$base-font-size: 16px;
-$logo-font-size: 33.51px;
+$font-size-base: 16px;
 $font-size-h1: 65px;
 $font-size-h2: 62px;
 $font-size-h3: 36px;
@@ -39,19 +44,14 @@ $font-size-md: 22px;
 $font-size-sm: 14px;
 
 // Font color
-$font-color-primary: $dark-grey;
-$font-color-secondary: $COLOR_WHITE;
-$font-color-additional: $COLOR-PINK;
+$font-color-primary: $DARK-GRAY;
+$font-color-secondary: $WHITE;
 
 //Controls
-$btn-border-color: $pale-gray;
-$btn-bg-color: (1: $dark-pink, 2: $dark-grey);
+$mapBtnBgColor: (1: $DARK-PINK, 2: $DARK-GRAY);
+$btn-toggle-menu-color: $WHITE;
 
-//Main menu color
-$font-color-menu: $COLOR_PINK;
-$btn-toggle-menu-color: $COLOR_WHITE;
-
-$input-color: $dark-grey;
+$input-color: $DARK-GRAY;
 
 // List of colors for numbering
 $color-list-number: (1: #ffde16, 2: #ffbd9e, 3: #20c9e0, 4: #2eac66, 5: #ff6179, 6: #ffde16);
