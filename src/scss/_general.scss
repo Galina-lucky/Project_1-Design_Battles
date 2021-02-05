@@ -86,11 +86,19 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  &:hover {
+    & .card__avatar {
+      transform: scale(1.1);
+    }
+  }
+
 	&__avatar {
     margin-left: auto;
     margin-right: auto;
 		margin-bottom: 20px;
 		border-radius: 10px;
+    transform: scale(1);
+    transition: 0.3s transform ease;
 
     @media (max-width: $screen-md-max) {
       margin-bottom: 10px;

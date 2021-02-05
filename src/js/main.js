@@ -11,11 +11,6 @@
   $(document).ready(function() {
     let input = $('.js-form-contact-input');
 
-    AOS.init({
-      disable: 'mobile',
-      once: true
-    });
-
     getNavTopSize();
     smoothScroll();
     setMenuStiky();
