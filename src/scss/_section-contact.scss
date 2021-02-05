@@ -4,7 +4,7 @@
 
 .form-contact {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: flex-end;
 	margin-left: auto;
 	margin-right: auto;
@@ -14,7 +14,7 @@
     display: block;
   }
 
-  &__field {
+  &__group {
     width: 50%;
     padding-left: 15px;
     padding-right: 15px;
@@ -40,7 +40,7 @@
       background-color: $input-color;
     }
 
-    &--big {
+    &--lg {
       width: 100%;
       font-size: 0;
     }
@@ -50,7 +50,6 @@
     position: relative;
 	  padding-bottom: 7px;
     padding-top: 10px;
-	  //margin-bottom: 15px;
 		width: 100%;		
 		border: none;
 		border-bottom: 6px solid $input-color;
@@ -71,7 +70,6 @@
 		  border-bottom: 6px solid transparent;
 
 		  & + .form-contact__caption {
-        //bottom: -5px;
         transform: translateY(0px);
 		  }
 	  }
@@ -80,16 +78,7 @@
 	  	border-bottom: 6px solid darken($input-color, 20);
 	  }
 
-    // Не всегда срабатывало!
-    /* &:valid + .form-contact__caption {
-      bottom: -5px;
-		}*/
-
-    &:invalid:not(:placeholder-shown) + .form-contact__caption  {
-      bottom: -5px;
-		} //Может, это убрать? Не могу понять, как оно теперь работает
-
-		&--message {
+    &--message {
 	  	height: 175px;
 		  width: 100%;
 		  resize: none;      
@@ -100,17 +89,14 @@
 		display: block;
 		position: absolute;
 		left: 15px;
-		//bottom: 34px;
 		color: $input-color;
 		font-size: 13px;
-		//padding-top: 7px;
 		transition: 0.3s;
 		z-index: 0;
 
     transform: translateY(-32px);
 
     &--bottom {
-      //bottom: -5px;
       transform: translateY(0px);
     }
 	}

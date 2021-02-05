@@ -83,7 +83,6 @@
 }
 
 .card { 
-  display: block;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -102,12 +101,10 @@
       min-width: 208px;
     }
 
-    &--round {
+    &--circle {
       height: 360px;
-      width: 360px;
+      width: 100%;
       object-fit: cover;
-      /*object-fit: none;
-      object-position: center -95px;*/
       border-radius: 50%;
 
       @media (max-width: $screen-lg-max) {
@@ -123,8 +120,7 @@
 	&__name {
     margin-bottom: 15px;
     font-size: $font-size-xlg;
-    font-weight: $fw-bold;
-    line-height: 1.5;
+    font-weight: 700;
 
     @media (max-width: $screen-md-max) {
       margin-bottom: 0;
@@ -141,9 +137,6 @@
   }
 
 	&__position {
-		overflow: hidden;
-	  text-overflow: ellipsis; 
-
     @media (max-width: $screen-sm-max) {      
       font-size: $font-size-sm;
     } 
@@ -152,12 +145,13 @@
 
 .list-cards {
 	display: flex;
-	flex-flow: row wrap;
+  flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
 
   &__item {
-    flex: 0 0 33%;
+    flex-shrink: 0;
+    flex-basis: 33%;
     margin-bottom: 30px;
   }
 }

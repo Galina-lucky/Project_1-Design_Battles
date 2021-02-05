@@ -1,19 +1,19 @@
 $WHITE: #fff;
 $PINK: #e71cb4;
-$DARK-PINK: #c60ebe;
-$DARK-PURPLE: #460340;
-$LIGHT-GRAY: #eee;
-$PALE-GRAY: #ddd;
-$DARK-GRAY: #444;
+$DARK_PINK: #c60ebe;
+$DARK_PURPLE: #460340;
+$LIGHT_GRAY: #eee;
+$PALE_GRAY: #ddd;
+$DARK_GRAY: #444;
 $BLACK: #000;
 
 $color-white: $WHITE;
 $color-pink: $PINK;
-$color-dark-pink: $DARK-PINK;
-$color-dark-purple: $DARK-PURPLE;
-$color-light-gray: $LIGHT-GRAY;
-$color-pale-gray: $PALE-GRAY;
-$color-dark-gray: $DARK-GRAY;
+$color-dark-pink: $DARK_PINK;
+$color-dark-purple: $DARK_PURPLE;
+$color-light-gray: $LIGHT_GRAY;
+$color-pale-gray: $PALE_GRAY;
+$color-dark-gray: $DARK_GRAY;
 $color-black: $BLACK;
 
 // Background color
@@ -27,16 +27,11 @@ $line-height-base: 1.5;
 $line-height-lg: 1.818181;
 $line-height-md: 1.2;
 
-$fw-regular: 400;
-$fw-medium: 500;
-$fw-bold: 700;
-
 $font-size-base: 16px;
 $font-size-h1: 65px;
 $font-size-h2: 62px;
 $font-size-h3: 36px;
 $font-size-h4: 30px;
-$font-size-xxxlg: 72px;
 $font-size-xxlg: 40px;
 $font-size-xlg: 32px;
 $font-size-lg: 24px;
@@ -44,14 +39,15 @@ $font-size-md: 22px;
 $font-size-sm: 14px;
 
 // Font color
-$font-color-primary: $DARK-GRAY;
+$font-color-primary: $DARK_GRAY;
 $font-color-secondary: $WHITE;
 
 //Controls
-$mapBtnBgColor: (1: $DARK-PINK, 2: $DARK-GRAY);
+$btn-bg-color-primary: $DARK_PINK;
+$btn-bg-color-secondary: $DARK_GRAY;
 $btn-toggle-menu-color: $WHITE;
 
-$input-color: $DARK-GRAY;
+$input-color: $DARK_GRAY;
 
 // List of colors for numbering
 $color-list-number: (1: #ffde16, 2: #ffbd9e, 3: #20c9e0, 4: #2eac66, 5: #ff6179, 6: #ffde16);

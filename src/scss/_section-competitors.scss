@@ -1,5 +1,5 @@
 .section-competitors {
-	background: linear-gradient(to bottom, #339 0, #f0c 100%);
+	background-image: linear-gradient(to bottom, #339 0, #f0c 100%);
 	color: $font-color-secondary;
 	text-align: center;
 
@@ -32,7 +32,8 @@
 	&__item {
 		padding: 33px 38px 25px;
 		background-color: $color-dark-purple;
-		flex: 0 0 18.5%;
+		flex-shrink: 0;
+    flex-basis: 18.5%;
 		line-height: 1;
 
     &:not(:last-child) {
@@ -58,8 +59,10 @@
 	}
 
   &__number {
+    $font-size-xxxlg: 72px;
+
 		font-size: $font-size-xxxlg;
-    font-weight: $fw-bold;
+    font-weight: 700;
     margin-bottom: 12px;
 
     @media (max-width: $screen-md-max) {

@@ -33,7 +33,7 @@
 
 				<ul class="menu nav__menu js-menu">
 					<li class="menu__item">
-						<a class="menu__link menu__link--active js-menu-link" href="#about">About</a>
+						<a class="menu__link js-menu-link" href="#about">About</a>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link js-menu-link" href="#competitors">Competitors</a>
@@ -82,10 +82,10 @@
 				<p class="description">
 					Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
 				</p>	
-				<h4 class="section-about__date">
+				<h4 class="section-about__info">
 					Submissions starts on 10/12/2020 and end on 11/12/2020
 				</h4>
-				<p class="section-about__date-description">
+				<p class="section-about__help-text">
 					Nulla quis lorem ut libero malesuada feugiat eget tincidunt nibh pulvinar.
 				</p>
 
@@ -122,12 +122,12 @@
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
 			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="800">
-			  		<img class="card__avatar img-responsive" src="/img/competitor_5.jpg">
+			  		<img class="card__avatar img-responsive" src="/img/competitor_5.jpg" alt="competitor">
 			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
 			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="1000">
-			  		<img class="card__avatar img-responsive" src="/img/competitor_6.jpg">
+			  		<img class="card__avatar img-responsive" src="/img/competitor_6.jpg" alt="competitor">
 			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
@@ -189,17 +189,17 @@
 				<h2 class="title">Jury 2020</h2>
 				<ul class="list-cards">
 			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200">
-			  		<img class="card__avatar card__avatar--round img-responsive" src="/img/jury_1.jpg" alt="jury">
+			  		<img class="card__avatar card__avatar--circle img-responsive" src="/img/jury_1.jpg" alt="jury">
 			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
 			  	 <li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="200">
-			  		<img class="card__avatar card__avatar--round img-responsive" src="/img/jury_2.jpg" alt="jury">
+			  		<img class="card__avatar card__avatar--circle img-responsive" src="/img/jury_2.jpg" alt="jury">
 			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li>
 			  	<li class="card list-cards__item" data-aos="flip-left" data-aos-duration="200" data-aos-delay="400">
-			  		<img class="card__avatar card__avatar--round img-responsive" src="/img/jury_3.jpg" alt="jury">
+			  		<img class="card__avatar card__avatar--circle img-responsive" src="/img/jury_3.jpg" alt="jury">
 			  		<h3 class="card__name">John Stone</h3>
 			  		<p class="card__position">Creative Director at Amazing Game</p>
 			  	</li> 
@@ -219,28 +219,28 @@
 				</div> <!-- / .row -->
 				
 				<form class="form-contact">
-					<div class="form-contact__field">
+					<div class="form-contact__group js-form-contact-group">
 						<input id="first_name" class="form-contact__input js-form-contact-input" name="first-name" required type="text" value="">
 						<label class="form-contact__caption js-form-contact-caption" for="first_name">First name</label>
 					</div>
 
-          <div class="form-contact__field">
+          <div class="form-contact__group js-form-contact-group">
             <input id="last_name" class="form-contact__input js-form-contact-input" name="last-name" required type="text"  value="">
             <label class="form-contact__caption js-form-contact-caption" for="last_name">Last name</label>
           </div>
 
-          <div class="form-contact__field">
+          <div class="form-contact__group js-form-contact-group">
             <input id="email" class="form-contact__input js-form-contact-input" name="email" required type="email" value="">
             <label class="form-contact__caption js-form-contact-caption" for="email">Email</label>
           </div>
 
-          <div class="form-contact__field">
+          <div class="form-contact__group js-form-contact-group">
             <input id="website" class="form-contact__input js-form-contact-input" name="website" type="text" value="">
             <label class="form-contact__caption js-form-contact-caption" for="website">Website</label>
           </div>
 
-          <div class="form-contact__field form-contact__field--big">
-            <textarea id="message" class="form-contact__input form-contact__input--message js-form-contact-input" name="message" value=""></textarea>
+          <div class="form-contact__group form-contact__group--lg js-form-contact-group">
+            <textarea id="message" class="form-contact__input form-contact__input--message js-form-contact-input" name="message"></textarea>
             <label class="form-contact__caption js-form-contact-caption" for="message">Message</label>
           </div>
 

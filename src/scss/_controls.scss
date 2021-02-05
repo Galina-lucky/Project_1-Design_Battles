@@ -26,8 +26,7 @@
 }
 
 a,
-button,
- {
+button {
 	@extend %controls-transition;
 }
 
@@ -63,24 +62,29 @@ a {
 	box-shadow: none;
 
   &--primary {
-    background-color: map-get($mapBtnBgColor, 1);
-    border-color: map-get($mapBtnBgColor, 1);
+    background-color: $btn-bg-color-primary;
+    border-color: $btn-bg-color-primary;
     text-transform: capitalize;
 
-    @include  hover-focus-active ($font-color-secondary, map-get($mapBtnBgColor, 1));
+    @include  hover-focus-active ($font-color-secondary, $btn-bg-color-primary);
   }
 
   &--secondary {
-    background-color: map-get($mapBtnBgColor, 2);
-    border-color: map-get($mapBtnBgColor, 2);
+    background-color: $btn-bg-color-secondary;
+    border-color: $btn-bg-color-secondary;
     border-radius: 0;
     text-transform: uppercase;
 
-    @include  hover-focus-active ($font-color-secondary, map-get($mapBtnBgColor, 2));
+    @include  hover-focus-active ($font-color-secondary, $btn-bg-color-secondary);
   }
 
   &--outline {
     text-transform: capitalize;
+
+    &:focus {
+      background-color: rgba(225, 225, 225, 0.4);
+      box-shadow: none;
+    }
 
     &:hover {
       @media (min-width: $screen-md-min) {
@@ -91,11 +95,6 @@ a {
       }
     }
 
-    &:focus {
-      background-color: rgba(225, 225, 225, 0.4);
-      box-shadow: none;
-    }
-
     &:active {
       background-color: rgba(225, 225, 225, 0.7);
     }
@@ -103,7 +102,7 @@ a {
 
   &--sm {
     min-width: 135px;
-    font-weight: $fw-bold;
+    font-weight: 700;
 
     @media (max-width: $screen-xs-max) {
       width: 100%;

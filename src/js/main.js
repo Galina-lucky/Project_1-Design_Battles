@@ -9,6 +9,7 @@
   let navTop;
 
   $(document).ready(function() {
+    let input = $('.js-form-contact-input');
 
     AOS.init({
       disable: 'mobile',
@@ -18,7 +19,6 @@
     getNavTopSize();
     smoothScroll();
     setMenuStiky();
-    checksInputEmptiness()
     hideMobileMenu();
     
     menuBtn.on('click', function() {
@@ -27,6 +27,15 @@
 
     menuLink.on('click', function() {
       menu.removeClass('menu--show');
+    });
+
+    input.on('blur', function() {
+      let label = $(this).closest('.js-form-contact-group').find('.js-form-contact-caption');
+      let val = $(this).val();
+
+      (val.length >= 1)
+        ? label.addClass('form-contact__caption--bottom')
+        : label.removeClass('form-contact__caption--bottom');
     });
   })
 
@@ -45,7 +54,7 @@
 
   function getNavTopSize() {
       navTop = ($(window).width() < 768) ? 15 : 30;
-    }
+  }
 
   // Make the main menu sticky
   function setMenuStiky() {
@@ -64,16 +73,12 @@
       $(this).blur();
 
       if ( ((target.offset().top <= scrollTop)
-        && (target.offset().top + target.outerHeight() > scrollTop))
-        /*|| (scrollTop == $(document).height() - $(window).height())*/ ) {
+        && (target.offset().top + target.outerHeight() > scrollTop))) {
         menuLink.removeClass("menu__link--active");
         $(this).addClass("menu__link--active");
       } else {
         $(this).removeClass("menu__link--active");
       }
-/*      if (scrollTop == $(document).height() - $(window).height()) {
-        menuLink.last().addClass("menu__link--active")
-      }*/
     });
   }
 
@@ -98,21 +103,6 @@
       $('html, body').animate({
         scrollTop: destination
       }, 600);
-    });
-  }
-
-  // Checks the input for emptiness and places the label
-  function checksInputEmptiness() {
-    let input = $('.js-form-contact-input');
-
-    input.on('blur', function() {
-      let idInput = $(this).attr("id");
-      let label = $('.js-form-contact-caption[for="' + idInput +'"]');
-      let val = $(this).val();
-
-      (val.length >= 1)
-      ? label.addClass('form-contact__caption--bottom')
-      : label.removeClass('form-contact__caption--bottom');
     });
   }
 })();
